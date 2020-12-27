@@ -1,0 +1,25 @@
+:root {
+    --font-size: 2em;
+    --primary-color: rgb(19, 7, 58);
+    --secondary-color: rgb(170, 151, 57);
+}
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: var(--font-size);
+}
+h1 {
+    text-align: center;
+    margin: .4em .2em;
+}
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .2em;
+    padding: .2em   
+}
+form div label,  form div input {
+    padding: .2em;
+    margin: .2em;
+}

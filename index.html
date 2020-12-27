@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <source src="main.js" defer>
+</head>
+<body>
+    <h1>Shape Maker</h1>
+    <form action="get" onsubmit="return false">
+        <div class="shapeChoice">
+            <label for="shape">What shape do you want?</label>
+            <select name="shape" id="shape">
+                <option value="circle">Circle</option>
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+            </select>
+        </div>
+        <div class="colorChoice">
+            <label for="color">What color do you want?</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <div class="sizeChoice">
+            <label for="size">What size do you want? (1-10)</label>
+            <input type="range" min="1" max="10" step="1" name="size" id="size">
+        </div>
+        <div class="submitContainer">
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+    <div class="shapeContainer"></div>
+</body>
+</html>
