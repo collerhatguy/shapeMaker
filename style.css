@@ -23,3 +23,6 @@ form div label,  form div input {
     padding: .2em;
     margin: .2em;
 }
+#shapeContainer div {
+    margin: .4em auto;
+}
