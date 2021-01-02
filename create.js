@@ -3,12 +3,19 @@
     const newShape = document.createElement("div");
     // secondary color
     var secondaryColor = "rgb(170, 151, 57)"
-    // setting size to string 
+    // creating different ratios
     var halfSize = size / 2;
     var twiceSize = size * 2;
+    var threeTenthsSize = size * 3 / 10;
+    // setting size to string 
     size = (size * 50).toString() + "px";
     twiceSize = (twiceSize * 50).toString() + "px";
     halfSize = (halfSize * 50).toString() + "px";
+    threeTenthsSize = (threeTenthsSize * 50).toString() + "px";
+
+    // secondary shape that acts as a pseudo element
+
+    const Shape2 = document.createElement("div");
 
     // setting color
     newShape.style.backgroundColor = color;
@@ -40,7 +47,6 @@
             newShape.style.borderBottom = size + " solid " + color;
             newShape.style.backgroundColor = secondaryColor;
             break;
-        /*
         case "Star":
             newShape.style.width = 0;
             newShape.style.height = 0;
@@ -48,12 +54,64 @@
             newShape.style.borderRight = halfSize + " solid transparent";
             newShape.style.borderBottom = size + " solid " + color;
             newShape.style.backgroundColor = secondaryColor;
+            newShape.style.position = "relative";
+            Shape2.style.width = 0;
+            Shape2.style.height = 0;
+            Shape2.style.borderLeft = halfSize + " solid transparent";
+            Shape2.style.borderRight = halfSize + " solid transparent";
+            Shape2.style.borderTop = size + " solid " + color;
+            Shape2.style.backgroundColor = "transparent";
+            Shape2.style.position = "absolute";
+            Shape2.style.left = "-" + halfSize;
+            Shape2.style.top = threeTenthsSize;
+            newShape.append(Shape2);
             break;
-        case "Heart":
-            newShape.style.width = size;
-            newShape.style.height = size;
+        case "Diamond":
+            newShape.style.width = 0;
+            newShape.style.height = 0;
+            newShape.style.border = halfSize + " solid transparent";
+            newShape.style.borderBottomColor = color;
+            newShape.style.backgroundColor = "transparent";
+            newShape.style.position = "relative";
+            newShape.style.top = "-" + halfSize;
+            Shape2.style.width = 0;
+            Shape2.style.height = 0;
+            Shape2.style.border = halfSize + " solid transparent";
+            Shape2.style.borderTopColor = color;
+            Shape2.style.backgroundColor = "transparent";
+            Shape2.style.position = "absolute";
+            Shape2.style.left = "-" + halfSize;
+            Shape2.style.top = halfSize;
+            newShape.append(Shape2);
             break;
-        */
+        // case "Pentagon":
+        //     newShape.style.width = size;
+        //     newShape.style.height = 0;
+        //     newShape.style.boxSizing = "content-box";
+        //     newShape.style.borderWidth = size + halfSize + "0";
+        //     newShape.style.borderStyle = "solid";
+        //     newShape.style.borderColor = color + " transparent";
+        //     newShape.style.backgroundColor = secondaryColor;
+        //     newShape.style.position = "relative";
+        //     const Shape2 = document.createElement("div");
+        //     Shape2.style.width = 0;
+        //     Shape2.style.height = 0;
+        //     Shape2.style.borderLeft = halfSize + " solid transparent";
+        //     Shape2.style.borderRight = halfSize + " solid transparent";
+        //     Shape2.style.borderTop = size + " solid " + color;
+        //     Shape2.style.backgroundColor = "transparent";
+        //     Shape2.style.position = "absolute";
+        //     Shape2.style.left = "-" + halfSize;
+        //     Shape2.style.top = "-" + twiceSize;
+        //     Shape2.style.borderWidth = "0 " + size + threeTenthsSize;
+        //     Shape2.style.borderStyle = "solid";
+        //     Shape2.style.borderColor = "transparent transparent " + color;
+        //     newShape.append(Shape2);
+        //     break;
+        // case "Heart":
+        //     newShape.style.width = size;
+        //     newShape.style.height = size;
+        //     break;
         default:  break;
     }
     return newShape;
