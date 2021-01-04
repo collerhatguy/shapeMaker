@@ -24,5 +24,8 @@ form div label,  form div input {
     margin: .2em;
 }
 #shapeContainer div {
-    margin: 0 auto;
+    margin: 100px auto;
+}
+#shapeContainer div div{
+    margin: 0px auto;
 }
