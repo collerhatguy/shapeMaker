@@ -5,38 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" type="module" defer></script>
+    <script src="code/main.js" type="module" defer></script>
 </head>
 <body>
-    <h1>Shape Maker</h1>
-    <form action="get" onsubmit="return false">
-        <div class="shapeChoice">
-            <label for="shape">What shape do you want?</label>
-            <select name="shape" id="shape">
-                <option value="Circle">Circle</option>
-                <option value="Oval">Oval</option>
-                <option value="Square">Square</option>
-                <option value="Rectangle">Rectangle</option>
-                <option value="Triangle">Triangle</option>
-                <option value="Star">Star</option>
-                <option value="Diamond">Diamond</option>
-                <!-- <option value="Pentagon">Pentagon</option>
-                <option value="Hexagon">Hexagon</option>
-                <option value="Heart">Heart</option> -->
-            </select>
-        </div>
-        <div class="colorChoice">
-            <label for="color">What color do you want?</label>
-            <input type="color" name="color" id="color">
-        </div>
-        <div class="sizeChoice">
-            <label for="size">What size do you want? (1-10)</label>
-            <input type="range" min="1" max="10" step="1" name="size" id="size">
-        </div>
-        <div class="submitContainer">
-            <button type="submit" id="submit">Submit</button>
-        </div>
-    </form>
+    <div class="headerBox">
+        <h1>Shape Maker</h1>
+        <form action="get" onsubmit="return false">
+            <div class="shapeChoice">
+                <label for="shape">What shape do you want?</label>
+                <select name="shape" id="shape">
+                    <option value="Circle">Circle</option>
+                    <option value="Oval">Oval</option>
+                    <option value="Square">Square</option>
+                    <option value="Rectangle">Rectangle</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Star">Star</option>
+                    <option value="Diamond">Diamond</option>
+                    <!-- <option value="Pentagon">Pentagon</option>
+                    <option value="Hexagon">Hexagon</option>
+                    <option value="Heart">Heart</option> -->
+                </select>
+            </div>
+            <div class="colorChoice">
+                <label for="color">What color do you want?</label>
+                <input type="color" name="color" id="color">
+            </div>
+            <div class="sizeChoice">
+                <label for="size">What size do you want? (1-10)</label>
+                <input type="range" min="1" max="10" step="1" name="size" id="size">
+            </div>
+            <div class="submitContainer">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
     <div id="shapeContainer"></div>
+    <button id="saveButton">Save</button>
+    <button id="deleteAll">Delete all</button>
 </body>
 </html>
