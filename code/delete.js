@@ -1,4 +1,4 @@
-export function deleteButton(shape) {
+export function addDeleteButton(shape) {
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Delete Shape?";
     deleteButton.addEventListener("click", () => {

@@ -1,3 +1,21 @@
+@-webkit-keyframes shapeCreated {
+  from {
+    scale: 0%;
+  }
+  to {
+    scale: 100%;
+  }
+}
+
+@keyframes shapeCreated {
+  from {
+    scale: 0%;
+  }
+  to {
+    scale: 100%;
+  }
+}
+
 body {
   background-color: #aa9739;
   color: #13073a;
@@ -30,6 +48,8 @@ form div label, form div input {
 
 #shapeContainer div {
   margin: 100px auto;
+  -webkit-animation: shapeCreated 300ms ease forwards;
+          animation: shapeCreated 300ms ease forwards;
 }
 
 #shapeContainer div div {
@@ -44,6 +64,15 @@ form div label, form div input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 95vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0px auto;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 button {
@@ -72,7 +101,7 @@ button:hover {
   margin: 5vh auto;
 }
 
-button, .headerBox {
+button, .headerBox, #shapeContainer {
   -webkit-box-shadow: 0.1em 0.2em 0.2em #13073a;
           box-shadow: 0.1em 0.2em 0.2em #13073a;
 }

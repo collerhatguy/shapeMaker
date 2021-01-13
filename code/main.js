@@ -8,15 +8,15 @@ const saveButton = document.getElementById("saveButton");
 const deleteALL = document.getElementById("deleteAll");
 var shapes = JSON.parse(localStorage.getItem("madeShapes")) || [];
 import { create } from "./create.js";
-import { deleteButton } from "./delete.js";
+import { addDeleteButton } from "./delete.js";
 
 console.log(shapes);
 // creating all previous shapes
 if (shapes.length >= 1) {
     shapes.forEach(shape => {
         const newShape = create(shape.form, shape.color, shape.size);
-        deleteButton(newShape);
         shapeContainer.appendChild(newShape);
+        addDeleteButton(newShape);
     });
 }
 submitButton.addEventListener("click", () => {
@@ -28,7 +28,7 @@ submitButton.addEventListener("click", () => {
     const newShape = create(chosenShape, chosenColor, chosenSize);
     // adding shape to screen
     shapeContainer.appendChild(newShape);
-    deleteButton(newShape);
+    addDeleteButton(newShape);
     // saving shape properties to an object
     const shapeSaved = {
         form: chosenShape,
@@ -40,12 +40,13 @@ submitButton.addEventListener("click", () => {
 });
 saveButton.addEventListener("click", () => {
     localStorage.setItem("madeShapes", JSON.stringify(shapes));
+    alert("all shapes saved to local storage")
 })
 deleteAll.addEventListener("click", () => {
     // clear local storage
     localStorage.clear("madeShapes")
     console.log(shapeContainer.children)
-    for (var i = 0; i - 1 <= shapeContainer.children.length; i++) {
+    while(shapeContainer.firstChild) {
         shapeContainer.firstChild.remove();
     }
 })
