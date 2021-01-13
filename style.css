@@ -1,56 +1,79 @@
-:root {
-    --font-size: 2em;
-    --primary-color: rgb(19, 7, 58);
-    --secondary-color: rgb(170, 151, 57);
-}
 body {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    font-size: var(--font-size);
+  background-color: #aa9739;
+  color: #13073a;
+  font-size: 2em;
 }
+
 h1 {
-    text-align: center;
-    margin: .4em .2em;
+  text-align: center;
+  margin: .4em .2em;
 }
+
 form div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: .2em;
-    padding: .2em   
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .2em;
+  padding: .2em;
 }
-form div label,  form div input {
-    padding: .2em;
-    margin: .2em;
+
+form div label, form div input {
+  margin: .2em;
+  padding: .2em;
 }
+
 #shapeContainer div {
-    margin: 100px auto;
+  margin: 100px auto;
 }
-#shapeContainer div div{
-    margin: 0px auto;
+
+#shapeContainer div div {
+  margin: 0px auto;
 }
+
 #shapeContainer {
-    display: flex;
-    flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 button {
-    display: block;
-    justify-content: center;
-    font-size: calc( var(--font-size) / (1.618 * 2));
-    padding: .5em;
-    margin: .2em auto;
-    width: max-content;
-    border-radius: 9999px;
-    transition-duration: 300ms;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.61805em;
+  padding: .5em;
+  margin: 0.2em auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 9999px;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
+
 button:hover {
-    font-size: calc( var(--font-size) / 1.618);
+  font-size: 1.23609em;
 }
+
 .headerBox {
-    width: 90vw;
-    height: 90vh;
-    margin: 5vh auto;
+  width: 90vw;
+  height: 90vh;
+  margin: 5vh auto;
 }
+
 button, .headerBox {
-    box-shadow: .1em .2em .2em var(--primary-color);
+  -webkit-box-shadow: 0.1em 0.2em 0.2em #13073a;
+          box-shadow: 0.1em 0.2em 0.2em #13073a;
 }
+/*# sourceMappingURL=style.css.map */

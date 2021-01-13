@@ -1,0 +1,60 @@
+
+$fontSize: 2em;
+$color: rgb(19, 7, 58);
+$backgroundColor: rgb(170, 151, 57);
+@mixin centerMargin($verticalMargin) {
+    margin: $verticalMargin auto;
+}
+@mixin defaultSpacing() {
+    margin: .2em;
+    padding: .2em;
+}
+body {
+    background-color: $backgroundColor;
+    color: $color;
+    font-size: $fontSize;
+}
+h1 {
+    text-align: center;
+    margin: .4em .2em;
+}
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include defaultSpacing(); 
+}
+form div label,  form div input {
+    @include defaultSpacing();
+}
+#shapeContainer div {
+    @include centerMargin(100px);
+}
+#shapeContainer div div{
+    @include centerMargin(0px);
+}
+#shapeContainer {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    display: block;
+    justify-content: center;
+    font-size:  $fontSize / (1.618 * 2);
+    padding: .5em;
+    @include centerMargin(.2em);
+    width: max-content;
+    border-radius: 9999px;
+    transition-duration: 300ms;
+}
+button:hover {
+    font-size:  $fontSize / 1.618;
+}
+.headerBox {
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh auto;
+}
+button, .headerBox {
+    box-shadow: .1em .2em .2em $color;
+}
