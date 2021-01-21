@@ -56,6 +56,7 @@ button {
     width: max-content;
     border-radius: 9999px;
     transition-duration: 300ms;
+    transform-origin: center;
     &:hover {
         font-size:  $fontSize / 1.618;
     }
