@@ -16,6 +16,24 @@
   }
 }
 
+@-webkit-keyframes shapeDeleted {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes shapeDeleted {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 body {
   background-color: #aa9739;
   color: #13073a;
@@ -27,6 +45,23 @@ h1 {
   margin: .4em .2em;
 }
 
+form {
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 form div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,9 +69,13 @@ form div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: .2em;
   padding: .2em;
 }
@@ -89,6 +128,8 @@ button {
   border-radius: 9999px;
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 button:hover {
@@ -104,5 +145,10 @@ button:hover {
 button, .headerBox, #shapeContainer {
   -webkit-box-shadow: 0.1em 0.2em 0.2em #13073a;
           box-shadow: 0.1em 0.2em 0.2em #13073a;
+}
+
+.deleting {
+  -webkit-animation: shapeDeleting 1s linear forwards;
+          animation: shapeDeleting 1s linear forwards;
 }
 /*# sourceMappingURL=style.css.map */

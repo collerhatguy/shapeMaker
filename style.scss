@@ -13,6 +13,10 @@ $backgroundColor: rgb(170, 151, 57);
     from { scale: 0% };
     to { scale: 100% };
 }
+@keyframes shapeDeleted {
+    from { opacity: 1; };
+    to { opacity: 0; };
+}
 body {
     background-color: $backgroundColor;
     color: $color;
@@ -22,10 +26,18 @@ h1 {
     text-align: center;
     margin: .4em .2em;
 }
+form {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    flex-direction: column;
+}
 form div {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: space-around;
+    flex-direction: row;
     @include defaultSpacing(); 
 }
 form div label,  form div input {
@@ -56,7 +68,7 @@ button {
     width: max-content;
     border-radius: 9999px;
     transition-duration: 300ms;
-    transform-origin: center;
+    transform-origin: center center;
     &:hover {
         font-size:  $fontSize / 1.618;
     }
@@ -68,4 +80,7 @@ button {
 }
 button, .headerBox, #shapeContainer {
     box-shadow: .1em .2em .2em $color;
+}
+.deleting {
+    animation: shapeDeleting 1s linear forwards;
 }
