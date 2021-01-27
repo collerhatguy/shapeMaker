@@ -2,8 +2,7 @@ export function addDeleteButton(shape) {
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Delete Shape?";
     deleteButton.addEventListener("click", () => {
-        // trigger delete animation
-        shape.className = "deleting";
+        // trigger delete animation here
         deleteButton.remove();
         shape.remove();
         // for letting the animation play out
