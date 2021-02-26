@@ -5,7 +5,7 @@ const sizeChoice = document.getElementById("size");
 const submitButton = document.getElementById("submit");
 const shapeContainer = document.getElementById("shapeContainer");
 const saveButton = document.getElementById("saveButton");
-const deleteALL = document.getElementById("deleteAll");
+const deleteAll = document.getElementById("deleteAll");
 var shapes = JSON.parse(localStorage.getItem("madeShapes")) || [];
 import { create } from "./create.js";
 import { addDeleteButton } from "./delete.js";
@@ -41,7 +41,7 @@ submitButton.addEventListener("click", () => {
 saveButton.addEventListener("click", () => {
     localStorage.setItem("madeShapes", JSON.stringify(shapes));
     alert("all shapes saved to local storage")
-})
+});
 deleteAll.addEventListener("click", () => {
     // clear local storage
     localStorage.clear("madeShapes")
