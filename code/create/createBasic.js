@@ -1,4 +1,4 @@
-export function createSquare(sizeString) {
+export function createSquare(newShape, sizeString) {
     newShape.style.width = sizeString;
     newShape.style.height = sizeString;
 }
