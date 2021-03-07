@@ -84,3 +84,8 @@ button, .headerBox, #shapeContainer {
 .deleting {
     animation: shapeDeleting 1s linear forwards;
 }
+
+button:focus {
+    outline: none;
+    border-color: $color;
+}

@@ -151,4 +151,9 @@ button, .headerBox, #shapeContainer {
   -webkit-animation: shapeDeleting 1s linear forwards;
           animation: shapeDeleting 1s linear forwards;
 }
+
+button:focus {
+  outline: none;
+  border-color: #13073a;
+}
 /*# sourceMappingURL=style.css.map */
