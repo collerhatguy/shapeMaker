@@ -1,4 +1,4 @@
-import * as createBasic from "./create/createBasic";
+
 export function create(shape, color, size) {
     // creating div
     const newShape = document.createElement("div");
@@ -22,7 +22,8 @@ export function create(shape, color, size) {
     // molding the shape
     switch(shape) {
         case "Square":
-            createBasic.createSquare(newShape, sizeString);
+            debugger;
+            createSquare(newShape, sizeString);
             break;
         case "Rectangle":
             newShape.style.width = twiceSizeString;
